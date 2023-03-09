@@ -68,3 +68,21 @@ p {
     padding: 15px;
     margin-top: 100px;
 }
+.login-btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(160, 3, 3);
+    border: 1px solid rgb(150, 2, 2);
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    color: white;
+    margin-inline-start: auto;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.login-btn1:hover{
+    transform:scale(1.05) ;
+}

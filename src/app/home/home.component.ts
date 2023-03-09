@@ -29,7 +29,7 @@ export class HomeComponent {
   }
   getLocal() {
     console.log('getLocal>>> home');
-    //--get localStorage
+    // --get localStorage
     this.userLocal = JSON.parse(localStorage.getItem("userLocal") || '{}');
     if (this.userLocal && this.userLocal.loggedIn) {
       this.loggedIn = this.userLocal.loggedIn;
