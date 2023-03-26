@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
   login() {
     this.userData=this.service.loginUser();
     debugger
-    this.userData = this.service.user[this.service.user.findIndex(user=> user.userName === this.service.users.userName && user.passWord ===this.service.users.passWord)]
+    // this.userData = this.service.user[this.service.user.findIndex(user=> user.userName === this.service.users.userName && user.passWord ===this.service.users.passWord)]
+    this.userData = this.service.user.find(user => (user.userName === this.service.users.userName && user.passWord === this.service.users.passWord));
     if (!this.userData) {
       this.userData = { loggedIn: false, data: {} };
       this.isErr = true;
