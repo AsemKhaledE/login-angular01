@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import jsonFileData from '../../login.json';
+import { find } from 'rxjs';
+import { LoginService } from './services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,16 +9,22 @@ import jsonFileData from '../../login.json';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  userData: any;
   userLocal: any;
   userName = '';
   passWord = '';
   isErr = false;
-  isNotValid=false;
-  errorMassage='';
-  constructor(private router: Router) { }
+  isNotValid = false;
+  errorMassage = '';
+  userData: any;
 
-  ngOnInit(): void {
+  constructor(private router: Router, public service: LoginService) { }
+
+  ngOnInit() {
+    this.service.users = {
+      userName: '',
+      passWord: '',
+
+    };
     this.getLocal();
     if (this.userLocal && this.userLocal.loggedIn) {
       this.router.navigate(['home']);
@@ -29,16 +36,14 @@ export class LoginComponent implements OnInit {
     console.log('this.userLocal->>', this.userLocal);
   }
   login() {
-    var user = jsonFileData;
-    console.log('userName->>', this.userName);
-    console.log('passWord->>', this.passWord);
-
-    this.userData = user[user.findIndex(u => u.userName === this.userName && u.passWord === this.passWord)];
+    this.userData=this.service.loginUser();
+    debugger
+    this.userData = this.service.user[this.service.user.findIndex(user=> user.userName === this.service.users.userName && user.passWord ===this.service.users.passWord)]
     if (!this.userData) {
       this.userData = { loggedIn: false, data: {} };
       this.isErr = true;
-     this.isNotValid=true;
-     this.errorMassage='Email Or PassWord Is Wrong'
+      this.isNotValid = true;
+      this.errorMassage = 'Email Or PassWord Is Wrong'
     } else {
       this.isErr = false;
       //--set localStorage
