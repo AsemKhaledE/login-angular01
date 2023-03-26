@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import jsonFileData from '../../login.json';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
     console.log('this.userLocal->>', this.userLocal);
   }
   login() {
-    var user = this.getData();
+    var user = jsonFileData;
     console.log('userName->>', this.userName);
     console.log('passWord->>', this.passWord);
 
@@ -47,22 +48,5 @@ export class LoginComponent implements OnInit {
     }
     return false;
   }
-
-  getData() {
-    return [{
-      userName: "a",
-      passWord: "1",
-    },
-    {
-      userName: "abdallah",
-      passWord: "1234567",
-    },
-    {
-      userName: "omar",
-      passWord: "123456",
-    },
-    ];
-  }
-  
 }
 

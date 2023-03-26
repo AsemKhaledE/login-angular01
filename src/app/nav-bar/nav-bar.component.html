@@ -6,9 +6,11 @@
       </ul>
     </div>
     <div class="login-btn1" ng-container *ngIf="loggedIn">
+      <i class="fa fa-sign-out" aria-hidden="true"></i>
       <div (click)="logout()" >Logout</div>
     </div>
     <div class="login-btn" ng-container *ngIf="!loggedIn">
+      
       <div routerLink="login" >LOGIN</div>
     </div>
   </nav>

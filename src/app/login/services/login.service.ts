@@ -1,16 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Login } from '../models/login.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  loggedIn = false;
-  constructor(private router: Router) { }
-  userLocal: any;
+  _login: Login[] = [];
+  baseurl: string = "../../login.json"
+  userData: any;
+  isErr=false;
+  isNotValid=false;
+  errorMassage= '';
   userName: any;
   passWord: any;
+  constructor(private Http: HttpClient) { }
 
+  login() {
+    this.Http.get(this.baseurl).toPromise().then(res => {
+
+    })
+  }
+   
+  
 }
 
