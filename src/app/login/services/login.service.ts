@@ -5,23 +5,20 @@ import { User } from '../models/login.model';
   providedIn: 'root'
 })
 export class LoginService {
-  user: User[] = [];
-  users!: User;
+  users: User[] = [];
+  user!: User;
   baseUrl: string = 'http://localhost:3000/users'
 
   constructor(private http: HttpClient) {
-
   }
 
   loginUser() {
     debugger
-    return this.http
-      .get(this.baseUrl)
-      .toPromise()
-      .then((data: any) => {
-        this.user = data as User[];
-      });
-
+  this.http.get(this.baseUrl)
+  .toPromise()
+   .then((result:any) => {
+     this.users = result as User[];
+})
   }
 }
 

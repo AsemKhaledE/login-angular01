@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { find } from 'rxjs';
 import { LoginService } from './services/login.service';
 
 @Component({
@@ -20,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, public service: LoginService) { }
 
   ngOnInit() {
-    this.service.users = {
+    this.service.user = {
       userName: '',
       passWord: '',
 
@@ -39,7 +38,7 @@ export class LoginComponent implements OnInit {
     this.userData=this.service.loginUser();
     debugger
     // this.userData = this.service.user[this.service.user.findIndex(user=> user.userName === this.service.users.userName && user.passWord ===this.service.users.passWord)]
-    this.userData = this.service.user.find(user => (user.userName === this.service.users.userName && user.passWord === this.service.users.passWord));
+    this.userData = this.service.users.find(user => (user.userName === this.service.user.userName && user.passWord === this.service.user.passWord));
     if (!this.userData) {
       this.userData = { loggedIn: false, data: {} };
       this.isErr = true;

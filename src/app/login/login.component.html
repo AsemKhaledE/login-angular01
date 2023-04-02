@@ -8,17 +8,17 @@
             <form class="login">
                 <div class=" login_field">
                     <i class="login_icon fas fa-user"></i>
-                    <input type="text" class="login_input" placeholder="User Name / Email" [(ngModel)]="this.service.users.userName"
+                    <input type="text" class="login_input" placeholder="User Name / Email" [(ngModel)]="this.service.user.userName"
                         [ngModelOptions]="{standalone: true}">
                     <br>
-                    <small *ngIf="!this.service.users.userName" class="text-danger">*Username is required</small>
+                    <small *ngIf="!this.service.user.userName" class="text-danger">*Username is required</small>
                 </div>
                 <div class="login_field">
                     <i class="login_icon fas fa-lock"></i>
-                    <input type="password" class="login_input" placeholder="Password" [(ngModel)]="this.service.users.passWord"
+                    <input type="password" class="login_input" placeholder="Password" [(ngModel)]="this.service.user.passWord"
                         [ngModelOptions]="{standalone: true}">
                     <br>
-                    <small *ngIf="!this.service.users.passWord" class="text-danger">*Password is required</small>
+                    <small *ngIf="!this.service.user.passWord" class="text-danger">*Password is required</small>
                 </div>
                 <small class="text-danger" *ngIf="isErr">{{errorMassage}}</small>
                 <button class="button login_submit ">

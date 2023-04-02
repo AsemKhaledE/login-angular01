@@ -14,7 +14,7 @@ nav{
     color:darkcyan;
     font-weight:600;
     font-family: sans-serif;
-    cursor: pointer;
+    cursor: text;
 }
 .nav-links {
     font-size: 0.9rem;

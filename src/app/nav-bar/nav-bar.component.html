@@ -3,10 +3,11 @@
     <div class="nav-links">
       <ul ng-container *ngIf="loggedIn">
         <li><a routerLink="/home">home</a></li>
+        <li><a routerLink="/map">Map</a></li>
       </ul>
     </div>
     <div class="login-btn1" ng-container *ngIf="loggedIn">
-      <i class="fa fa-sign-out" aria-hidden="true"></i>
+      <!-- <i class="fa fa-sign-out" aria-hidden="true"></i> -->
       <div (click)="logout()" >Logout</div>
     </div>
     <div class="login-btn" ng-container *ngIf="!loggedIn">

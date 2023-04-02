@@ -9,12 +9,14 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
+import { MapComponent } from './map/map.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavBarComponent,
-    HomeComponent
+    HomeComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     BrowserAnimationsModule,
     TooltipModule.forRoot()
+    
     
   ],
   providers: [],
