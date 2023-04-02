@@ -50,7 +50,7 @@ export class MapComponent implements OnInit {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-    // create 3 markers and add them to map
+    // create 10 markers and add them to map
      Array(10).fill(this.centroid).map( 
         x => [x[0] + (Math.random() - .1)/8, x[1] + (Math.random() - .4)/7 ]
       ).map(
