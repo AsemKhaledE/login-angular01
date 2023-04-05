@@ -1,0 +1,17 @@
+{
+    
+    "Angular":"أنجولار",
+    "home":"الصفحة الرئيسية",
+    "map":"الخريطة",
+    "Email Or PassWord Is Wrong":"البريد الإلكتروني أو كلمة المرور خطأ",
+    "*Password is required":"كلمة السر فارغة *",
+    "*Username is required":"أسم المستخدم فارغ*",
+    "User":{
+        "userName":"اسم المستخدم/ البريد",
+        "passWord":"كلمة السر",
+        "LOGIN":"تسجيل الدخول",
+        "Logout":"تسجيل الخروج",
+        "last login is":"آخر تسجيل دخول",
+        "dir":"rtl"
+    }
+}

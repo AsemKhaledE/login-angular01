@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
-  newDate = new Date();
-  date = this.newDate.toLocaleString()
+   newDate = new Date();
+   date = this.newDate.toLocaleString()
+  
   userLocal: any;
   loggedIn = false;
 
@@ -37,4 +37,5 @@ export class HomeComponent {
       this.loggedIn = false;
     }
   }
+
 }

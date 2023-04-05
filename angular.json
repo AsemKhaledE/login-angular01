@@ -48,6 +48,16 @@
               ],
               "outputHashing": "all"
             },
+            "en": {
+              "localize": ["en"],
+              "outputPath": "dist/under-construction-en/",
+              "i18nMissingTranslation": "error"
+            },
+            "ar": {
+              "localize": ["ar"],
+              "outputPath": "dist/under-construction-ar/",
+              "i18nMissingTranslation": "error"
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,

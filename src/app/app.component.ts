@@ -1,4 +1,5 @@
 import { Component, createEnvironmentInjector } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -7,5 +8,10 @@ import { Component, createEnvironmentInjector } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: any;
+constructor(public translateService: TranslateService){
+  this.translateService.addLangs(['en', 'ar']);
+  this.translateService.setDefaultLang('en');
+  this.translateService.use('en');
 }
+  }
+

@@ -13,13 +13,12 @@ export class LoginService {
   }
 
   loginUser() {
-    debugger
-  this.http.get(this.baseUrl)
-  .toPromise()
-   .then((result:any) => {
-     this.users = result as User[];
-})
+     
+  return this.http.get(this.baseUrl).toPromise().then(res=>{
+    this.users = res as User[]
+  })
+    
   }
-}
+ }
 
 

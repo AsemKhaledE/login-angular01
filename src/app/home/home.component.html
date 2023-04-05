@@ -1,7 +1,7 @@
-<nav>
+<nav [dir]="'dir|translate'">
     <ul>
         <ng-container *ngIf="loggedIn">
-            <li><span class="user">last login is {{date}}</span>
+            <li><span class="user">{{'User.last login is' | translate}}  {{date}}</span>
         </ng-container>
     </ul>
 </nav>

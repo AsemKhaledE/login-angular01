@@ -16,7 +16,9 @@ export class LoginComponent implements OnInit {
   errorMassage = '';
   userData: any;
 
-  constructor(private router: Router, public service: LoginService) { }
+  constructor(private router: Router, public service: LoginService) {
+
+   }
 
   ngOnInit() {
     this.service.user = {
@@ -43,7 +45,6 @@ export class LoginComponent implements OnInit {
       this.userData = { loggedIn: false, data: {} };
       this.isErr = true;
       this.isNotValid = true;
-      this.errorMassage = 'Email Or PassWord Is Wrong'
     } else {
       this.isErr = false;
       //--set localStorage
@@ -53,5 +54,6 @@ export class LoginComponent implements OnInit {
     }
     return false;
   }
+
 }
 

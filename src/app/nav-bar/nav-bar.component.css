@@ -86,3 +86,14 @@ p {
 .login-btn1:hover{
     transform:scale(1.05) ;
 }
+.lang-btn{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0 px;
+    margin-inline-start: auto;
+    margin-right: 30px;
+}

@@ -1,17 +1,28 @@
-  <nav>
-    <div class="nav-brand">Angular</div>
-    <div class="nav-links">
-      <ul ng-container *ngIf="loggedIn">
-        <li><a routerLink="/home">home</a></li>
-        <li><a routerLink="/map">Map</a></li>
-      </ul>
-    </div>
-    <div class="login-btn1" ng-container *ngIf="loggedIn">
-      <!-- <i class="fa fa-sign-out" aria-hidden="true"></i> -->
-      <div (click)="logout()" >Logout</div>
-    </div>
-    <div class="login-btn" ng-container *ngIf="!loggedIn">
-      
-      <div routerLink="login" >LOGIN</div>
-    </div>
-  </nav>
+<nav class="layout" [dir]="'dir|translate'">
+  <div class="nav-brand">{{"Angular" | translate}}</div>
+  <div class="nav-links">
+
+    <ul ng-container *ngIf="loggedIn">
+      <li i18n><a routerLink="/home">{{'home' | translate}}</a></li>
+      <li><a routerLink="/map">{{'map' | translate}}</a></li>
+      <li>
+        <span class="form-inline">
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="login-btn1" ng-container *ngIf="loggedIn">
+    <!-- <i class="fa fa-sign-out" aria-hidden="true"></i> -->
+    <div (click)="logout()">{{'User.Logout'|translate}}</div>
+  </div>
+  <div class="login-btn" ng-container *ngIf="!loggedIn">
+
+    <div routerLink="login">{{'User.LOGIN'|translate}}</div>
+  </div>
+  <div>
+    <select class="lang-btn" aria-label=".form-select-lg mb-3 " #selectedLang (change)="language($event)">
+      <option value="en" [selected]="lang =='en'">English</option>
+      <option value="ar" [selected]="lang =='ar'">عربي</option>
+    </select>
+  </div>
+</nav>

@@ -1,4 +1,5 @@
 <body>
+
     <head>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -8,23 +9,23 @@
             <form class="login">
                 <div class=" login_field">
                     <i class="login_icon fas fa-user"></i>
-                    <input type="text" class="login_input" placeholder="User Name / Email" [(ngModel)]="this.service.user.userName"
-                        [ngModelOptions]="{standalone: true}">
+                    <input type="text" class="login_input" placeholder="{{'User.userName'|translate}}"
+                        [(ngModel)]="this.service.user.userName" [ngModelOptions]="{standalone: true}">
                     <br>
-                    <small *ngIf="!this.service.user.userName" class="text-danger">*Username is required</small>
+                    <small *ngIf="!this.service.user.userName" class="text-danger">{{'*Username is required'| translate}}</small>
                 </div>
                 <div class="login_field">
                     <i class="login_icon fas fa-lock"></i>
-                    <input type="password" class="login_input" placeholder="Password" [(ngModel)]="this.service.user.passWord"
-                        [ngModelOptions]="{standalone: true}">
+                    <input type="password" class="login_input" placeholder="{{'User.passWord'|translate}}"
+                        [(ngModel)]="this.service.user.passWord" [ngModelOptions]="{standalone: true}">
                     <br>
-                    <small *ngIf="!this.service.user.passWord" class="text-danger">*Password is required</small>
+                    <small *ngIf="!this.service.user.passWord" class="text-danger">{{'*Password is required' |translate}}</small>
                 </div>
-                <small class="text-danger" *ngIf="isErr">{{errorMassage}}</small>
+                <small class="text-danger" *ngIf="isErr">{{'Email Or PassWord Is Wrong' | translate}}</small>
                 <button class="button login_submit ">
-                    <span  (click)="login()"  class="button_text">lOGIN</span>                   
+                    <span (click)="login()" class="button_text">{{'User.LOGIN'|translate}}</span>
                     <i class="button_icon fas fa-chevron-right"></i>
-                </button>              
+                </button>
             </form>
         </div>
     </div>
