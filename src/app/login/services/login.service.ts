@@ -12,10 +12,12 @@ export class LoginService {
   constructor(private http: HttpClient) {
   }
 
-  loginUser() {
-     
-  return this.http.get(this.baseUrl).toPromise().then(res=>{
-    this.users = res as User[]
+ async loginUser() {
+     debugger
+    return await  this.http.get(this.baseUrl).toPromise().then(
+      (data:any) =>{
+        console.log(data)
+        this.users=data as User[]
   })
     
   }

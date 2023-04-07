@@ -36,8 +36,8 @@ export class LoginComponent implements OnInit {
     this.userLocal = JSON.parse(localStorage.getItem("userLocal") || '{}');
     console.log('this.userLocal->>', this.userLocal);
   }
-  login() {
-    this.userData=this.service.loginUser();
+  async login() {
+    this.userData = await this.service.loginUser();
     debugger
     // this.userData = this.service.user[this.service.user.findIndex(user=> user.userName === this.service.users.userName && user.passWord ===this.service.users.passWord)]
     this.userData = this.service.users.find(user => (user.userName === this.service.user.userName && user.passWord === this.service.user.passWord));
