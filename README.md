@@ -5,7 +5,7 @@
 - Developed the front-end style Login .
 - add last login time .
 - add 3 market in Page Map .
-- add localization (Ar & En)
+- Using localization (Ar & En)
 
 # AngularTask
 
