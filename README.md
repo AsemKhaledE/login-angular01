@@ -1,10 +1,10 @@
 ## Technologies
-   used the technique of TypeScript, Css ,Html ,Angular (version 15.1.6).
+   Used the technique of TypeScript, Css ,Html ,Angular (version 15.1.6).
 
 ## Advantages
 - Developed the front-end style Login .
-- add last login time .
-- add 3 market in Page Map .
+- Add last login time .
+- Add 3 market in Page Map .
 - Using localization (Ar & En)
 
 # AngularTask
